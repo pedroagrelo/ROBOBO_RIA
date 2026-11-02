@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+__MACOSX/
+docker-ros/ws/p2/logs_puente/
+docker-ros/ws/p2/resultados/*/chk/
