@@ -1,0 +1,92 @@
+=== gen 010
+=== gen 010
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen010.pkl  (formulación C, T=70 s)
+  ep.1: F=   0.21  colision             2.8 s  en banda  57.1 %  sep 0.275 m  |desv| 31.4°  incr   0.21 final  +0.0  paradas 0/0
+  ep.2: F=   1.63  perdido_sin_ver      5.6 s  en banda  78.6 %  sep 0.387 m  |desv| 53.8°  incr   1.63 final  +0.0  paradas 0/0
+  ep.3: F=   0.54  perdido_sin_ver      4.4 s  en banda  72.7 %  sep 0.266 m  |desv| 73.4°  incr   0.54 final  +0.0  paradas 0/0
+  ep.4: F=   2.87  perdido_sin_ver      8.8 s  en banda  59.1 %  sep 0.233 m  |desv| 20.4°  incr   2.87 final  +0.0  paradas 0/0
+  ep.5: F=   4.15  perdido_sin_ver      8.4 s  en banda  38.1 %  sep 0.279 m  |desv| 11.3°  incr   4.15 final  +0.0  paradas 0/0
+  -> media 1.88  mínimo 0.21  máximo 4.15
+### closed connection ###
+=== gen 007
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen007.pkl  (formulación C, T=70 s)
+  ep.1: F=   0.66  perdido_sin_ver      4.8 s  en banda  66.7 %  sep 0.412 m  |desv| 50.9°  incr   0.66 final  +0.0  paradas 0/0
+  ep.2: F=   0.99  perdido_distancia    5.6 s  en banda  28.6 %  sep 0.545 m  |desv| 74.6°  incr   0.99 final  +0.0  paradas 0/0
+  ep.3: F=   2.00  perdido_sin_ver      6.0 s  en banda  80.0 %  sep 0.380 m  |desv| 58.5°  incr   2.00 final  +0.0  paradas 0/0
+  ep.4: F=   1.64  perdido_distancia    7.6 s  en banda   0.0 %  sep 0.636 m  |desv| 45.1°  incr   1.64 final  +0.0  paradas 0/0
+  ep.5: F=   1.08  perdido_distancia    5.2 s  en banda  46.1 %  sep 0.494 m  |desv| 78.7°  incr   1.08 final  +0.0  paradas 0/0
+  -> media 1.28  mínimo 0.66  máximo 2.00
+### closed connection ###
+=== gen 013
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen013.pkl  (formulación C, T=70 s)
+  ep.1: F=   3.13  perdido_distancia   10.8 s  en banda   0.0 %  sep 0.678 m  |desv| 13.8°  incr   3.13 final  +0.0  paradas 0/0
+  ep.2: F=   3.01  perdido_distancia   10.0 s  en banda   0.0 %  sep 0.681 m  |desv| 12.4°  incr   3.01 final  +0.0  paradas 0/0
+  ep.3: F=   2.61  perdido_distancia   11.2 s  en banda   0.0 %  sep 0.688 m  |desv| 15.6°  incr   2.61 final  +0.0  paradas 0/0
+  ep.4: F=   2.90  perdido_sin_ver     15.2 s  en banda   0.0 %  sep 0.672 m  |desv| 27.7°  incr   2.90 final  +0.0  paradas 0/0
+  ep.5: F=   2.67  perdido_distancia    9.6 s  en banda   0.0 %  sep 0.699 m  |desv| 13.0°  incr   2.67 final  +0.0  paradas 0/0
+  -> media 2.86  mínimo 2.61  máximo 3.13
+### closed connection ###
+=== gen 016
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen016.pkl  (formulación C, T=70 s)
+  ep.1: F=   0.48  perdido_sin_ver      4.4 s  en banda  72.7 %  sep 0.411 m  |desv| 39.5°  incr   0.48 final  +0.0  paradas 0/0
+  ep.2: F=   6.60  perdido_sin_ver     14.8 s  en banda  35.1 %  sep 0.407 m  |desv| 24.0°  incr   6.60 final  +0.0  paradas 0/0
+  ep.3: F=   4.55  perdido_distancia   17.6 s  en banda  22.7 %  sep 0.582 m  |desv| 22.0°  incr   4.55 final  +0.0  paradas 0/0
+  ep.4: F=   1.43  perdido_sin_ver      6.0 s  en banda  40.0 %  sep 0.442 m  |desv| 59.4°  incr   1.43 final  +0.0  paradas 0/0
+  ep.5: F=   0.20  perdido_sin_ver      4.4 s  en banda  36.3 %  sep 0.545 m  |desv| 96.5°  incr   0.20 final  +0.0  paradas 0/0
+  -> media 2.65  mínimo 0.20  máximo 6.60
+### closed connection ###
+=== gen 019
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen019.pkl  (formulación C, T=70 s)
+  ep.1: F=   1.24  perdido_sin_ver      6.0 s  en banda   0.0 %  sep 0.501 m  |desv| 25.6°  incr   1.24 final  +0.0  paradas 0/0
+  ep.2: F=   3.24  perdido_distancia   10.0 s  en banda   0.0 %  sep 0.685 m  |desv| 12.0°  incr   3.24 final  +0.0  paradas 0/0
+  ep.3: F=   9.32  perdido_sin_ver     31.2 s  en banda  14.1 %  sep 0.605 m  |desv| 20.5°  incr   9.32 final  +0.0  paradas 0/0
+  ep.4: F=   4.34  perdido_distancia   13.2 s  en banda   0.0 %  sep 0.647 m  |desv| 11.7°  incr   4.34 final  +0.0  paradas 0/0
+  ep.5: F=   5.46  perdido_distancia   26.4 s  en banda   0.0 %  sep 0.689 m  |desv| 16.6°  incr   5.46 final  +0.0  paradas 0/0
+  -> media 4.72  mínimo 1.24  máximo 9.32
+### closed connection ###
+=== gen 048
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen048.pkl  (formulación C, T=70 s)
+  ep.1: F=   0.88  perdido_sin_ver      4.0 s  en banda  20.0 %  sep 0.175 m  |desv|  6.7°  incr   0.88 final  +0.0  paradas 0/0
+  ep.2: F=   0.66  perdido_sin_ver      4.0 s  en banda  10.0 %  sep 0.185 m  |desv| 13.9°  incr   0.66 final  +0.0  paradas 0/0
+  ep.3: F=   0.72  perdido_sin_ver      4.0 s  en banda  20.0 %  sep 0.174 m  |desv| 13.5°  incr   0.72 final  +0.0  paradas 0/0
+  ep.4: F=   0.80  perdido_sin_ver      4.0 s  en banda  20.0 %  sep 0.178 m  |desv|  5.7°  incr   0.80 final  +0.0  paradas 0/0
+  ep.5: F=   0.81  perdido_sin_ver      4.0 s  en banda  20.0 %  sep 0.169 m  |desv|  5.6°  incr   0.81 final  +0.0  paradas 0/0
+  -> media 0.77  mínimo 0.66  máximo 0.88
+### closed connection ###
+=== gen 047
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen047.pkl  (formulación C, T=70 s)
+  ep.1: F=   0.64  perdido_sin_ver      6.0 s  en banda   0.0 %  sep 0.594 m  |desv| 36.2°  incr   0.64 final  +0.0  paradas 0/0
+  ep.2: F=   0.35  perdido_sin_ver      6.8 s  en banda   0.0 %  sep 0.619 m  |desv| 36.0°  incr   0.35 final  +0.0  paradas 0/0
+  ep.3: F=   0.78  perdido_sin_ver      8.0 s  en banda   0.0 %  sep 0.677 m  |desv| 28.4°  incr   0.78 final  +0.0  paradas 0/0
+  ep.4: F=   0.59  perdido_sin_ver      7.6 s  en banda   0.0 %  sep 0.636 m  |desv| 37.2°  incr   0.59 final  +0.0  paradas 0/0
+  ep.5: F=   0.46  perdido_sin_ver      8.4 s  en banda   0.0 %  sep 0.636 m  |desv| 38.9°  incr   0.46 final  +0.0  paradas 0/0
+  -> media 0.56  mínimo 0.35  máximo 0.78
+### closed connection ###

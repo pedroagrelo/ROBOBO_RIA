@@ -1,0 +1,74 @@
+# =====================================================================
+# Práctica 1 — Configuración v2 (configuración por defecto)
+# =====================================================================
+# Parámetros del entorno RoboboFollowEnv para RoboboSim (escena Follow
+# City). Los modelos de modelos/ (sac_s40, sac_s41, sac_s42, ppo_s40) se
+# entrenaron con este archivo, que es el que se carga si no se indica
+# --config.
+#
+# Diferencias con config_v1.yaml:
+#   control     v_max 0.20 -> 0.35 m/s y w_max 0.75 -> 0.9 rad/s, para
+#               alcanzar al guía en las configuraciones rápidas (C2, C3)
+#   recompensa  el término de distancia nunca resta (clip_distancia 1),
+#               +0,5 por paso dentro de la banda (bonus_banda) y
+#               penalizaciones terminales mayores (colisión -30, perdido -20)
+#
+# Los valores de blob, IR y size_banda proceden de la calibración con
+# p1_calibrar_colocar.py (datos/calib_colocar_tilt100.csv, tilt 100°).
+
+ros:
+  # robot_name del puente del seguidor -> espacio de nombres /robobo/robot_<nombre>
+  seguidor: "0"
+
+camara:
+  tilt_angulo: 100           # grados; se fija en cada reinicio del episodio
+  tilt_velocidad: 10
+  espera_visible_s: 8.0      # tiempo máximo esperando ver la pelota tras un reinicio
+  frames_visible_ok: 2       # lecturas seguidas con pelota para dar el reinicio por bueno
+
+blob:
+  color: green
+  x_min: 0                   # rango de blob.x que da el detector (0 = borde izquierdo)
+  x_max: 100                 # (100 = borde derecho; centro de la imagen en 50)
+  size_max: 600              # normalización del tamaño; el máximo medido fue ~443
+  size_min: 1                # por debajo de este tamaño se considera que no se ve
+
+ir:
+  usar: true
+  topic: ir                  # base/ir (Int32MultiArray)
+  indices_frontales: [0, 1, 2, 3, 4]
+  saturacion: 1000.0         # normalización del IR frontal (valores mayores se limitan a 1)
+
+control:
+  periodo_s: 0.2             # tiempo que se aplica cada acción antes de leer
+  keepalive_s: 0.1           # reenvío de cmd_vel (el puente para el robot sin órdenes en 0,5 s)
+  v_min: 0.0                 # m/s
+  v_max: 0.35                # m/s (v1: 0.20)
+  w_max: 0.9                 # rad/s (v1: 0.75)
+  frames_perdido_norm: 10    # normalización de "lecturas seguidas sin ver la pelota"
+
+episodio:
+  duracion_s: 60.0           # episodio completado al llegar a este tiempo
+  espera_max_lectura_s: 3.0  # tiempo máximo esperando un mensaje de blobs
+  reintentos_reset: 3        # reinicios de escena si no se ve la pelota
+
+# ---------------------------------------------------------------------
+# Recompensa y terminación: sólo con lo que mide el seguidor (blob e IR).
+# ---------------------------------------------------------------------
+recompensa:
+  # Banda de tamaño del blob que se premia. Según la calibración,
+  # size 200 ≈ 0,37 m, size 130 (centro) ≈ 0,45 m y size 60 ≈ 0,60 m.
+  size_banda: [60.0, 200.0]
+  k_size: 1.0                # término de distancia: +1 en el centro de la banda, 0 en los bordes
+  clip_distancia: 1.0        # fuera de la banda el término de distancia vale 0 (v1: 2, llegaba a -1)
+  bonus_banda: 0.5           # +0,5 por paso con la pelota dentro de size_banda (v1: 0)
+  k_centro: 0.3              # penalización por pelota descentrada (x²)
+  k_giro: 0.5                # penalización por girar (a_w²)
+  k_no_visible: 0.5          # penalización por cada paso sin ver la pelota
+  pen_colision: -30.0        # v1: -20
+  pen_perdido: -20.0         # v1: -10
+  bonus_completado: 5.0
+
+terminacion:
+  ir_colision: 500.0         # colisión si el IR frontal llega a este valor (seguidor a menos de ~0,20 m)
+  max_frames_perdido: 5      # guía perdido tras 5 pasos seguidos sin ver la pelota (~2,5 s)

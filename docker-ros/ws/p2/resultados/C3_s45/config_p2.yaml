@@ -1,0 +1,32 @@
+entorno:
+  config_p1: ../config_v2.yaml
+  duracion_s: 70.0
+  ip_sim: host.docker.internal
+  objeto_guia: PATHFOLLOWROBOBO
+  robot_id: 0
+evolucion:
+  episodios_por_individuo: 2
+  agregacion: media
+fallos:
+  d_colision: 0.12
+  d_perdido: 0.9
+  t_sin_ver: 3.0
+calidad:
+  formulacion: A
+  escala: 90.0
+  banda:
+  - 0.2
+  - 0.45
+  d0: 0.325
+  sigma: 0.15
+  theta_max: 45.0
+  w_sep: 1.0
+  w_ali: 0.5
+  k_giro: 0.02
+  bonus_completado: 10.0
+  pen_colision: -10.0
+  pen_perdido: -5.0
+  bonus_parada: 2.0
+  t_tras_parada: 10.0
+  v_parada: 0.01
+  t_parada: 0.5

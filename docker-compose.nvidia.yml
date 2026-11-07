@@ -1,0 +1,13 @@
+# GPU NVIDIA a través de WSL2. Requiere GPU NVIDIA con el driver de Windows que
+# da soporte a WSL2. start.ps1 añade este fichero automáticamente si nvidia-smi
+# responde y un contenedor de prueba con --gpus all arranca bien: declararlo
+# siempre impide arrancar en equipos sin NVIDIA.
+services:
+   pc-robobo:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

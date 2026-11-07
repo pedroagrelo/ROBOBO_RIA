@@ -1,0 +1,72 @@
+# =====================================================================
+# Práctica 2 — Configuración del entorno de evaluación y de la CALIDAD
+# =====================================================================
+# Los parámetros de NEAT (población, mutaciones, especiación...) están en
+# config-p2.ini. Aquí van los de nuestra parte: cómo se evalúa cada
+# individuo y cómo se calcula su calidad.
+
+entorno:
+  config_p1: ../config_v2.yaml   # config del entorno de la P1 (blob, IR, control...)
+  duracion_s: 70.0               # duración máxima del episodio de EVALUACIÓN en la evolución
+                                 # (el protocolo del anexo B usa 120 s)
+  ip_sim: host.docker.internal   # RoboboSim (para leer la verdad del terreno con robobosim)
+  objeto_guia: PATHFOLLOWROBOBO
+  robot_id: 0
+
+# Maniobra fija tras el reinicio de la escena, antes de evaluar (anexo B: se admiten
+# acciones de arranque predeterminadas). El reloj del episodio empieza al acabar.
+arranque:
+  activo: true
+  espera_parado_s: 1.0           # seguidor PARADO tras el avance y antes de empezar a evaluar
+  duracion_s: 1.0
+  velocidad_cm_s: 15.0           # avance recto (cmd_vel lineal = 0,15 m/s); w = 0
+  parar_si_sep_menor_m: 0.20     # se corta antes si la separación real baja de esto
+
+evolucion:
+  episodios_por_individuo: 2     # k: episodios que se promedian por individuo
+  agregacion: media              # media | minimo (minimo favorece a los robustos)
+
+# ---------------------------------------------------------------------
+# Fallos que cortan el episodio (anexo B de la P2). Se miden con las
+# poses reales del simulador. Salirse del carril NO es fallo del protocolo.
+# ---------------------------------------------------------------------
+fallos:
+  d_colision: 0.12               # m: separación menor -> colisión
+  d_perdido: 0.90                # m: separación mayor -> guía perdido
+  t_sin_ver: 3.0                 # s: pelota sin detectarse más de esto -> guía perdido
+
+# ---------------------------------------------------------------------
+# Función de calidad
+#   formulacion A (mixta):  F = escala·(1/T)·∫ r_t dt + B_final + bonus·paradas
+#       r_t = (w_sep·s_t + w_ali·a_t)/(w_sep+w_ali) - k_giro·a_w²
+#       s_t = exp(-((sep - d0)/sigma)²)           separación (real)
+#       a_t = 1 - clip(|desv|/theta_max, 0, 1)     alineación (real)
+#   formulacion B (casi final): F = escala·(t_vivo/T)·(0.5 + 0.5·frac_banda) + B_final + bonus·paradas
+# La integral se hace con el tiempo real de cada paso (dt), y se divide
+# entre T = duracion_s: el que falla pronto pierde todo lo que no vive.
+# ---------------------------------------------------------------------
+calidad:
+  formulacion: C                 # A = poses reales | B = casi final | C = blob (size_blob y x_blob)
+  escala: 90.0                   # F ideal ~ escala + bonus_completado ~ 100
+  banda: [0.20, 0.45]            # m, banda objetivo del anexo B
+  d0: 0.325                      # m, centro de la banda
+  sigma: 0.15                    # m, anchura de la gaussiana de separación
+  theta_max: 45.0                # grados: a partir de aquí la alineación vale 0
+  w_sep: 1.0
+  w_ali: 0.5
+  k_giro: 0.0                    # penalización por girar (acción de giro normalizada al cuadrado)
+  k_avance: 0.05                # premio por avanzar: + k_avance·(a_v+1)/2 por paso (0 parado, 1 a velocidad máxima)
+  avance_con_puerta: true        # el premio por avanzar solo cuenta si se ve la pelota
+  sep_real: true                 # (formulacion C) S con la separación REAL (gaussiana: d0, sigma); false = estimada con el blob
+  lambda_sep: 0.25               # (formulacion C) anchura de la cola exponencial de S, en m
+  k_dist_blob: 0.0433            # (formulacion C) d_est = sqrt(k / size_blob);  size ~ 26/d^2, size_blob = size/600
+  puerta_visible: true           # sin ver la pelota (visible=False) no se suma S ni A en ese paso
+  # Terminales (se suman al final del episodio según cómo acabó)
+  bonus_completado: 10.0         # llegó a duracion_s sin fallo
+  pen_colision: 0.0
+  pen_perdido: 0.0
+  # Paradas del guía (sólo tienen efecto en C4)
+  bonus_parada: 0.0              # por cada parada superada
+  t_tras_parada: 10.0            # s sin fallo después de que el guía reanude
+  v_parada: 0.01                 # m/s: guía parado si va más despacio de esto...
+  t_parada: 0.5                  # ...durante más de estos segundos

@@ -1,0 +1,109 @@
+=== gen 033
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen033.pkl  (formulación A, T=70 s)
+  ep.1: F=  -4.66  perdido_distancia    5.6 s  en banda  64.3 %  sep 0.431 m  |desv| 95.2°  incr   0.34 final  -5.0  paradas 0/1
+[reset] No se ve la pelota tras 8 s; reintento 1
+  ep.2: F=  -3.64  perdido_distancia    3.6 s  en banda  66.6 %  sep 0.480 m  |desv| 96.9°  incr   1.36 final  -5.0  paradas 0/0
+[reset] No se ve la pelota tras 8 s; reintento 1
+  ep.3: F=  -4.66  perdido_sin_ver      4.4 s  en banda  63.6 %  sep 0.433 m  |desv| 91.0°  incr   0.34 final  -5.0  paradas 0/0
+  ep.4: F=  -5.08  perdido_sin_ver      3.2 s  en banda   0.0 %  sep 0.589 m  |desv| 128.2°  incr  -0.08 final  -5.0  paradas 0/1
+  ep.5: F=  -3.59  perdido_distancia    3.6 s  en banda  66.7 %  sep 0.468 m  |desv| 91.2°  incr   1.41 final  -5.0  paradas 0/0
+  -> media -4.33  mínimo -5.08  máximo -3.59
+### closed connection ###
+=== gen 039
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen039.pkl  (formulación A, T=70 s)
+  ep.1: F=  -5.08  perdido_sin_ver      3.2 s  en banda  87.5 %  sep 0.361 m  |desv| 81.5°  incr  -0.08 final  -5.0  paradas 0/0
+  ep.2: F=  -9.41  colision             1.6 s  en banda  50.0 %  sep 0.280 m  |desv| 16.0°  incr   0.59 final -10.0  paradas 0/0
+  ep.3: F=  -4.14  perdido_sin_ver      4.0 s  en banda  20.0 %  sep 0.160 m  |desv|  8.1°  incr   0.86 final  -5.0  paradas 0/0
+  ep.4: F=  -5.08  perdido_sin_ver      3.2 s  en banda  75.0 %  sep 0.424 m  |desv| 75.7°  incr  -0.08 final  -5.0  paradas 0/1
+  ep.5: F=  -4.81  perdido_sin_ver      4.8 s  en banda  33.3 %  sep 0.214 m  |desv| 33.3°  incr   0.19 final  -5.0  paradas 0/0
+  -> media -5.70  mínimo -9.41  máximo -4.14
+### closed connection ###
+=== gen 043
+=== gen 033
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen033.pkl  (formulación A, T=70 s)
+  ep.1: F=  -4.70  perdido_distancia    3.6 s  en banda  33.3 %  sep 0.580 m  |desv| 97.4°  incr   0.30 final  -5.0  paradas 0/0
+[reset] No se ve la pelota tras 8 s; reintento 1
+  ep.2: F=  -4.13  perdido_distancia    4.4 s  en banda  45.4 %  sep 0.492 m  |desv| 89.8°  incr   0.87 final  -5.0  paradas 0/1
+  ep.3: F=  -4.73  perdido_distancia    3.2 s  en banda  50.0 %  sep 0.580 m  |desv| 103.3°  incr   0.27 final  -5.0  paradas 0/0
+  ep.4: F=  -4.46  perdido_distancia    2.4 s  en banda   0.0 %  sep 0.567 m  |desv| 80.6°  incr   0.54 final  -5.0  paradas 0/0
+  ep.5: F=  -4.73  perdido_distancia    2.8 s  en banda  42.9 %  sep 0.622 m  |desv| 100.7°  incr   0.27 final  -5.0  paradas 0/0
+  -> media -4.55  mínimo -4.73  máximo -4.13
+### closed connection ###
+=== gen 039
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen039.pkl  (formulación A, T=70 s)
+  ep.1: F=  -5.08  perdido_sin_ver      3.1 s  en banda  51.4 %  sep 0.544 m  |desv| 107.4°  incr  -0.08 final  -5.0  paradas 0/0
+  ep.2: F=  -3.80  perdido_sin_ver      4.3 s  en banda  27.9 %  sep 0.180 m  |desv|  6.5°  incr   1.20 final  -5.0  paradas 0/0
+  ep.3: F=  -4.06  perdido_sin_ver      4.0 s  en banda  22.5 %  sep 0.163 m  |desv|  1.1°  incr   0.94 final  -5.0  paradas 0/0
+  ep.4: F=  -5.08  perdido_sin_ver      3.0 s  en banda   0.0 %  sep 0.658 m  |desv| 151.6°  incr  -0.08 final  -5.0  paradas 0/0
+  ep.5: F=  -3.87  perdido_sin_ver      4.3 s  en banda  28.2 %  sep 0.188 m  |desv|  7.9°  incr   1.13 final  -5.0  paradas 0/0
+  -> media -4.38  mínimo -5.08  máximo -3.80
+### closed connection ###
+=== gen 043
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen043.pkl  (formulación A, T=70 s)
+  ep.1: F= -10.03  colision             2.0 s  en banda  80.0 %  sep 0.326 m  |desv| 55.9°  incr  -0.03 final -10.0  paradas 0/0
+  ep.2: F=  -4.03  perdido_distancia    4.0 s  en banda  39.9 %  sep 0.507 m  |desv| 86.6°  incr   0.97 final  -5.0  paradas 0/0
+  ep.3: F=  -3.80  perdido_sin_ver      4.4 s  en banda  16.3 %  sep 0.218 m  |desv| 13.1°  incr   1.20 final  -5.0  paradas 0/0
+  ep.4: F=  -5.04  perdido_distancia    2.6 s  en banda  69.8 %  sep 0.511 m  |desv| 122.9°  incr  -0.04 final  -5.0  paradas 0/0
+[reset] No se ve la pelota tras 8 s; reintento 1
+  ep.5: F=  -5.04  perdido_distancia    2.2 s  en banda  35.0 %  sep 0.654 m  |desv| 126.1°  incr  -0.04 final  -5.0  paradas 0/1
+  -> media -5.59  mínimo -10.03  máximo -3.80
+### closed connection ###
+=== gen 033
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen033.pkl  (formulación A, T=70 s)
+  ep.1: F=  -4.80  perdido_distancia    2.8 s  en banda  28.6 %  sep 0.625 m  |desv| 113.3°  incr   0.20 final  -5.0  paradas 0/0
+  ep.2: F=  -4.82  perdido_distancia    3.2 s  en banda   0.0 %  sep 0.668 m  |desv| 109.3°  incr   0.18 final  -5.0  paradas 0/0
+  ep.3: F=  -4.84  perdido_distancia    2.8 s  en banda   0.0 %  sep 0.640 m  |desv| 116.6°  incr   0.16 final  -5.0  paradas 0/0
+  ep.4: F=  -4.77  perdido_sin_ver      3.6 s  en banda  11.1 %  sep 0.650 m  |desv| 102.1°  incr   0.23 final  -5.0  paradas 0/0
+  ep.5: F=  -4.81  perdido_distancia    3.6 s  en banda  11.2 %  sep 0.634 m  |desv| 106.0°  incr   0.19 final  -5.0  paradas 0/0
+  -> media -4.81  mínimo -4.84  máximo -4.77
+### closed connection ###
+=== gen 039
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen039.pkl  (formulación A, T=70 s)
+  ep.1: F=  -3.88  perdido_sin_ver      4.4 s  en banda  18.2 %  sep 0.186 m  |desv|  7.7°  incr   1.12 final  -5.0  paradas 0/0
+  ep.2: F=  -4.01  perdido_sin_ver      4.4 s  en banda  18.2 %  sep 0.184 m  |desv| 10.3°  incr   0.99 final  -5.0  paradas 0/0
+  ep.3: F=  -3.91  perdido_sin_ver      4.4 s  en banda  18.2 %  sep 0.187 m  |desv| 11.6°  incr   1.09 final  -5.0  paradas 0/0
+  ep.4: F=  -3.94  perdido_sin_ver      4.4 s  en banda  18.2 %  sep 0.183 m  |desv|  9.7°  incr   1.06 final  -5.0  paradas 0/0
+  ep.5: F=  -3.99  perdido_sin_ver      4.4 s  en banda  27.3 %  sep 0.179 m  |desv| 11.7°  incr   1.01 final  -5.0  paradas 0/0
+  -> media -3.95  mínimo -4.01  máximo -3.88
+### closed connection ###
+=== gen 043
+Connecting to SIM
+wait
+### connection established ###
+
+== mejor_gen043.pkl  (formulación A, T=70 s)
+  ep.1: F=  -4.73  perdido_distancia    2.8 s  en banda  57.1 %  sep 0.563 m  |desv| 117.6°  incr   0.27 final  -5.0  paradas 0/0
+  ep.2: F=  -4.17  perdido_distancia    2.8 s  en banda  42.9 %  sep 0.483 m  |desv| 108.7°  incr   0.83 final  -5.0  paradas 0/0
+  ep.3: F=  -4.65  perdido_distancia    2.8 s  en banda  57.1 %  sep 0.534 m  |desv| 112.3°  incr   0.35 final  -5.0  paradas 0/0
+  ep.4: F=  -4.75  perdido_distancia    2.8 s  en banda  42.8 %  sep 0.510 m  |desv| 115.7°  incr   0.25 final  -5.0  paradas 0/0
+  ep.5: F=  -4.70  perdido_distancia    2.8 s  en banda  57.2 %  sep 0.529 m  |desv| 118.7°  incr   0.30 final  -5.0  paradas 0/0
+  -> media -4.60  mínimo -4.75  máximo -4.17
+### closed connection ###

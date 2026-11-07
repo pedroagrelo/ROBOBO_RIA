@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+__MACOSX/
+docker-ros/ws/p1/
+docker-ros/ws/p2/logs_puente/
+docker-ros/ws/p2/resultados/*/chk/
+docker-ros/ws/p2/resultados/prueba/
+docker-ros/ws/p2/resultados/test/
+docker-ros/ws/p2/resultados/test2/
+docker-ros/ws/p2/resultados/prueba_puerta/
+docker-ros/ws/p2/resultados/test3/
+docker-ros/ws/p2/resultados/test4/
+docker-ros/ws/p2/resultados/test5/

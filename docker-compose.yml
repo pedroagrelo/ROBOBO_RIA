@@ -1,0 +1,27 @@
+services:
+   pc-robobo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    cap_add:
+      - NET_ADMIN
+    stdin_open: true
+    tty: true
+    image: pc-robobo
+    container_name: pc-robobo
+    hostname: pc-robobo
+    volumes:
+      - ./docker-ros:/docker-ros
+      - ~/Repositories:/Repositories
+      - /run/desktop/mnt/host/wslg/.X11-unix:/tmp/.X11-unix
+      - /run/desktop/mnt/host/wslg:/mnt/wslg
+    environment:
+      # Usuario dentro del contenedor
+      - DOCKER_GID
+      - DOCKER_UID
+      - DOCKER_USER
+      # Visualización con WSLg
+      - DISPLAY=:0
+      - WAYLAND_DISPLAY=wayland-0
+      - XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+      - PULSE_SERVER=/mnt/wslg/PulseServer
